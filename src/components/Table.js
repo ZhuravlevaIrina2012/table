@@ -11,7 +11,6 @@ const Table = ({table, moveRow, deleteRow}) => {
     const [,drop] = useDrop({
         accept: type,
         drop(item){
-            console.log("I am here");
             if (dropZone.current) {
                 deleteRow(item.index);
             }
