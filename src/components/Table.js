@@ -8,8 +8,6 @@ import {type} from "../constant";
 const Table = ({table, moveRow, deleteRow}) => {
     const dropZone = useRef(null);
 
-    const {getRootProps} = useDropzone();
-
     const [,drop] = useDrop({
         accept: type,
         drop(item){
@@ -23,7 +21,7 @@ const Table = ({table, moveRow, deleteRow}) => {
     drop(dropZone);
 
     return (
-        <div ref={dropZone} className='data' {...getRootProps()}>
+        <div ref={dropZone} className='data'>
             <table className='table'>
                 <thead>
                 <tr>
